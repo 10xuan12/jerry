@@ -22,7 +22,7 @@ def index():
     homepage += "<a href=/read>人選人演員查詢</a><br><br>"
     homepage += "<a href=/addbooks>圖書館精選</a><br>"
     homepage += "<a href=/searchbk>圖書查詢</a><br>"
-    homepage += "<a href=/spider>網路爬蟲</a><br>"
+    homepage += "<a href=/spider2>網路爬蟲</a><br>"
     return homepage
 
 @app.route("/mis")
@@ -100,8 +100,8 @@ def searchbk():
     else:
         return render_template("searchbk.html")
 
-@app.route("/spider")
-def spider():
+@app.route("/spider2")
+def spider2():
     url = "https://www1.pu.edu.tw/~tcyang/course.html"
     Data = requests.get(url)
     Data.encoding = "utf-8"
